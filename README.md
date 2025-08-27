@@ -30,6 +30,8 @@ The **Rehab Clothing Website** is a stylish, modern, and responsive front-end fo
 - MDN Web Docs. (n.d.). *CSS: Cascading Style Sheets*. Mozilla. Available at: [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) (Accessed: 27 August 2025).
 - W3Schools. (n.d.). *HTML and CSS Tutorials*. Available at: [https://www.w3schools.com](https://www.w3schools.com) (Accessed: 27 August 2025).
 - X. (2019). REHAB CLOTHING DM to place an order.[https://x.com/REHAB_CLOTHING/status/1152591744028020736?t=1IdRkvRrFSvKpkTg-2wvtw&s=19] (Accessed: 27 August 2025).
+- X. (2019). DM For orderz.R200 each T.[https://x.com/REHAB_CLOTHING/status/1104438898980204546?t=LEbDEXltphbgjnecd9C8SA&s=08] (Accessed: 15 August 2025).
+- X. (2019). [https://pbs.twimg.com/profile_images/1020426762608685056/YUD6rIV4.jpg] (Accessed: 14 August 2025).
 ## Author
 
 **Sfiskuk'thula Gods'rich Ngcebo Magagula**  

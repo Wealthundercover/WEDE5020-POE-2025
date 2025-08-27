@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home: Rehab clothing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+    <style>
+      #header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 80px;
+        background-color: rgb(125, 147, 165);  
+        box-shadow: 0 5px 15px rgba(0, 0, 0,0.06);
+        z-index: 999; 
+        position: sticky;
+        top: 0;
+        left: 0; 
+      }
+      #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #navbar li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+      }
+      #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a1a1a;
+        transition: 0.3s ease;
+      }
+      #navbar li a:hover,
+      #navbar li a.active {
+        color: rgb(53, 53, 211);
+       
+      }
+      #navbar li a.active::after,
+      #navbar li a:hover::after{
+        content: "";
+        width: 30%;
+        height: 2px;
+        background:rgb(53, 53, 211) ;
+        position: absolute;
+        bottom: -4px;
+        left: 20px;
+      }
+      #hero{
+        background-image: url(img/REHABHOMEPGE.jpeg);
+        height: 90vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top 25% right 0;
+        padding: 0 80px; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+
+      }
+      #hero h4{
+        padding-bottom: 15px;
+
+      }
+      #hero h1{
+        color:rgb(20, 84, 137);
+      }
+      #hero button{
+        background-image: url("img/Button\ backgroound.jpg");
+        background-color: transparent;
+        color:rgb(20, 84, 136);
+        border: 0;
+        padding: 14px 80px 14px 65px;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 15px;
+
+      }
+      #feature {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .section-p1{
+        padding: 50px 60px;
+      }
+      button.normal{
+        font-size: 14px;
+        font-weight: 600;
+        padding: 15px 30px;
+        color: #000;
+        background-color: #fbfbf7;
+        border-radius: 4px;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        transition: 0.2s;
+
+        }
+
+      .section-m1 {
+        margin: 40px 80px;
+      }
+      #feature .fe-box{
+        width: 180px;
+        text-align: center;
+        padding: 25px 15px;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+        border: 1px solid #cce7d0;
+        border-radius: 4px;
+        margin: 15px 0;
+      }
+      #feature .fe-box img{
+        width: 100%;
+        margin-bottom: 6px;
+
+      }
+      #feature .fe-box:hover{
+        box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+      }
+      #feature .fe-box h6{
+        display: inline-block;
+        padding: 9px 8px 6px 8px;
+        line-height: 1;
+        border-radius: 4px;
+        color:rgb(20, 84, 137);
+        background-color: rgba(7, 128, 241, 0.538);
+      }
+      #feature .fe-box:nth-child(2) h6{
+        background-color: #cce7d0;
+      }
+      
+      #feature .fe-box:nth-child(3) h6{
+        background-color: #e0d9176b;
+      }
+      
+      #feature .fe-box:nth-child(4) h6{
+        background-color: #f5134f5f;
+      }
+      
+      #feature .fe-box:nth-child(5) h6{
+        background-color: #1292f35d;
+      }
+      
+      #feature .fe-box:nth-child(6) h6{
+        background-color: #fa8d0789;
+      }
+      #product1{
+        h2 {text-align: center;}
+        p{text-align: center;}
+        h2{font-size: 35px;}
+        text-align: center;
+      }
+
+        #product1 .pro-container{
+          display: flex;
+          justify-content: space-between;
+          padding-top: 20px;
+          flex-wrap: wrap;
+
+        }
+
+      
+      #product1 .pro{
+        width: 23%;
+        min-width: 250px;
+        padding: 10px 12px;
+        border: 1px solid #cce7d0;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0,0.02);
+        margin: 15px 0;
+        transition: 0.2s ease;
+      }
+      #product1 .pro img{
+        width: 100%;
+        border-radius: 20px;
+      }
+      #product1 .pro:hover{
+        box-shadow: 20px 20px 30px rgba(0, 0, 0,0.09);
+      }
+      
+      #product1 .pro .des span{
+        color: #0f0fdaab;
+        font-size: 15px;
+      }
+      #product1 .pro .des h5{
+        padding-top: 7px;
+        color: #1a1a1a;
+        font-size: 14px;
+      }
+      #product1 .pro .des i{
+        font-size: 12px;
+        color: rgba(241, 221, 7, 0.726);
+      }
+      #product1 .pro .des h4{
+        padding-top: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        color: rgb(125, 147, 165); 
+      }
+      #product1 .pro .cart{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+        background-color:rgba(125, 147, 165, 0.249);
+       border-color: 1px solid #cce7d0;
+
+      }
+      #banner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url("img/Rehab\ back\ aesth_HD.jpg");
+        width: 100%;
+        height: 40vh;
+        background-size: cover;
+        background-position: center
+      }
+       
+        
+
+        #banner h2{
+          color: #fbfbf7;
+        font-size: 60px;
+        padding: 10px 0;
+        line-height: 0;
+        }
+        #banner h2 span{
+        color: #f1d608;
+        }
+        #banner button:hover{
+          background-color: blue;
+          color: #fbfbf7;
+        }
+        
+        #footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color:  rgb(125, 147, 165);
+  color:#060000;
+  padding: 20px 40px;
+  margin: 0;
+  width: 100%; 
+  box-sizing: border-box;
+  align-items: flex-start;
+ 
+  
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  margin-bottom: 10px;
+  padding: 0 20px; 
+  box-sizing: border-box;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-col a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 6px;
+  transition: 0.3s ease;
+  
+}
+
+
+.footer-col a:hover {
+  color: #0c2ffa;
+  padding-left: 5px;
+}
+
+.footer-col img {
+  margin-bottom: 10px;
+  width: 50px;
+  height: auto;
+}
+
+.footer-col.social i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.copyright {
+  text-align: center;
+  background-color: rgb(125, 147, 165);
+  color: #030000;
+  font-size: 13px;
+  padding: 10px 20px;
+}
+
+      
+    </style>
+
+  <body>
+    
+    
+  <section id="header">
+    </header>
+      <a href="#"></a><img src="img/rehab icon logo.png" class="logo" alt="" width="95" height="95"></a>
+
+    <div>
+       <ul id="navbar">
+           <li><a class="active" href="index.html">Home</a></li>
+           <li><a href="products.html">Products</a></li>
+           <li><a href="blog.html">Blog</a></li>
+           <li><a href="about.html">About Us</a></li>
+           <li><a href="contact.html">Contact</a></li>
+           <li><a href="cart.html"><i class='fas fa-shopping-bag' style='font-size:20px'></i></a></i>
+      </ul>
+    </div>
+  </section>
+  <section id="hero">
+    <h4>OFFERS</h4>
+    <h2>GET WHAT YOU WANT FOR LESS</h2>
+    <h1>ON ALL PRODUCTS!!</h1>
+    <p>Get free delivery on items above R1000!</p>
+    <button>Shop Now</button>
+  </section>
+
+  <section id="feature" class="section-p1">
+    <div class="fe-box">
+      <img src="img/delivery_5457510.png" alt="" width="5" height="110">
+      <h6>Free Shipping</h6>
+    </div>
+  
+    <div class="fe-box">
+      <img src="img/online-order_3176250.png" alt="" width="5" height="110">
+      <h6>Online Orders</h6>
+    </div>
+  
+    <div class="fe-box">
+      <img src="img/insurance_6476050.png" alt="" width="5" height="110">
+      <h6>Save Money</h6>
+    </div>
+  
+    <div class="fe-box">
+      <img src="img/promotion.png" alt="" width="5" height="110">
+      <h6>Free Promotions</h6>
+    </div>
+  
+    <div class="fe-box">
+      <img src="img/satisfied-customer.png" alt="" width="55" height="110">
+      <h6>Happy Customers</h6>
+    </div>
+    <div class="fe-box">
+      <img src="img/27-7.png" alt="" width="5" height="110">
+      <h6>24/7 Service</h6>
+    </div>
+  </section>
+
+ <section id="product1" class="section-p1">
+  <h2>Featured Products </h2>
+  <p>Exclusive Top Of The Line Streetwear</p>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="img/Rehab navy t .jpg" alt="">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Navy T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab cream t brown logo1.jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Cream White T-Shirt Brown Stitching</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab pink crop sweater 1.jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5>Orange Cropped Sweater</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R300</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab yellow logo t 2.jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Navy T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab purple cropped sweater 1.jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Purple Cropped Sweater</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R300</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab white t 1.jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> White T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Green and blue.jpeg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Green T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Black and Gold.jpeg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Black T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+  
+
+ </section>
+ <section id="banner" class=".section-m1 ">
+  <h2>Up to <span>40% Off</span> All t-Shirt & Accessories</h2>
+  <Button class="normal">Explore More</Button>
+ </section>
+
+ <section id="product1" class="section-p1">
+  <h2>New Arrivals</h2>
+  <p>Exclusive Top Of The Line Streetwear</p>
+  <div class="pro-container">
+    <div class="pro">
+      <img src="img/Rehab blue tee (2).jpeg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Maroon T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R200</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (3).jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Bulletproof Vest</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R350</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (5).jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5>Black T-Shirt Lion Design</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R200</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (6).jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Maroon T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R200</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (7).jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Pink T-Shirt</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R200</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (8).jpg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Camouflage Sweater</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R300</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab maroon sweater.jpeg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Maroon Sweater</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R300</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <div class="pro">
+      <img src="img/Rehab blue tee (1).jpeg" alt="" height="314">
+      <div class="des">
+        <span>Rehab</span>
+        <h5> Brown Baseball Cap</h5>
+        <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h4>R150</h4>
+      </div>
+      <a href="#"><i class='fas fa-cart-plus cart'></i></a>
+
+    </div>
+    <footer id="footer" class="section-p1">
+      <div class="footer-col">
+        <img src="img/rehab icon logo.png" alt="Rehab Logo" width="80" height="80">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Canal Walk Shopping Centre, Century Blvd, Milnerton, Cape Town, South Africa</p>
+        <p><strong>Phone:</strong> +27 636172969</p>
+        <p><strong>Email:</strong> info@rehabclothing.co.za</p>
+      </div>
+    
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">About Us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+      </div>
+    
+      <div class="footer-col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+    
+      <div class="footer-col social">
+        <h4>Follow Us</h4>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-x-twitter"></i> Twitter</a>
+        <a href="#"><i class="fab fa-tiktok"></i> TikTok</a>
+      </div>
+    </footer>
+    
+    <div class="copyright">
+      <p>&copy; 2025 Sfiskuk'thula Gods'rich Ngcebo Magagula. All Rights Reserved.</p>
+    </div>
+  
+
+ </section>
+
+  <script src="script.js"></script>
+
+    
+    
+
+    
+  </body>
+</html>

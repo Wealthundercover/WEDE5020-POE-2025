@@ -23,6 +23,12 @@ The **Rehab Clothing Website** is a stylish, modern, and responsive front-end fo
 - Flexible Layouts: Uses responsive CSS techniques (Flexbox) to organize product containers, feature boxes, and the footer for optimal viewing on various screen sizes.
 - Product & Promotion Display: Includes sections for Featured Products and New Arrivals with clear pricing (Rands) and static ratings, plus prominent, background-image-driven marketing banners.
 - Comprehensive Footer: Features full contact details, social media links, site navigation, and placeholders for App Install and supported Payment Gateways (Visa, Maestro, MasterCard).
+- Fixed Footer Scroll Issue (Structural Fix)
+-The primary goal of this update was to eliminate the unwanted scroll space below the page content, ensuring the scroll bar ends precisely at the footer.
+-Implementation: The Flexbox Sticky Footer technique was correctly implemented.
+-HTML Change: All main content sections (#hero through #contact) were wrapped in a new div with the class .main-content-wrapper.
+-CSS Change: The new .main-content-wrapper class was given the property flex-grow: 1 to force it to consume all available vertical space, effectively "pushing" the footer down to the absolute bottom of the page content.
+-Result: The footer is now correctly anchored, preventing the user from scrolling past the visual end of the page.
 
 **Purpose**:
 - Create a professional digital presence for Rehab Clothing
